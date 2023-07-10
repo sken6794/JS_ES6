@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>목록</li>
+      <li>목록</li>
+      <li>목록</li>
+      <li>목록</li>
+    </ul>
+
+    <script>
+      var li = document.querySelectorAll('li');
+
+      //i = 0,1,2,3 ...
+      /* for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener('click', () => {
+          console.log(i);
+          //var 로 했을 경우 i번째 출력을 하려해도 제일 마지막 값이 출력됨
+        });
+      } */
+      for (let i = 0; i < li.length; i++) {
+        li[i].addEventListener('click', () => {
+          console.log(i);
+          //let 으로 했을 경우 이벤트가 발생한 i 번째를 출력 해준다.
+        });
+      }
+
+      const arr = [1, 2, 3];
+      const num1 = [10, 20, 30, ...arr]; //... 이라고 하면 배열을 풀어서 나열함.
+      console.log(num1);
+    </script>
+  </body>
+</html>

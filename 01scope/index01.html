@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* var a = 10;
+      var a = '10';
+      console.log(a);
+
+      if (true) {
+        var a = true;
+      }
+      console.log(a); */
+
+      /* let 키워드는 중복 선언 불가 */
+      let a = 10;
+      //let a = '10';
+
+      //변수의 유효범위 중괄호
+      if (true) {
+        let a = true;
+        console.log(a); //true
+        //if 중괄호 내에서 선언한 a는 중괄호 내에서 선언한 값으로 지정
+      }
+      //중괄호를 벗어나면 그전에 선언했던 값으로 나온다.
+      console.log(a); // 10
+
+      console.log('--------------------------------------------------------');
+
+      //const 는 선언하면서 초기화가 되어야 한다.
+      const gender = '남자';
+      //gender = '여자'; //Uncaught TypeError: Assignment to constant variable. 에러 발생
+
+      const arr = [1, 2, 3];
+      //arr = '홍길동'; // 변경 불가
+      console.log(arr);
+      arr[0] = '홍길동';
+      arr[1] = '이순신';
+
+      arr.push('홍길자');
+      console.log(arr);
+      //배열 자체를(배열의 주소값) 바꿀 수는 없지만 배열 내의 값은 수정 가능하다.
+
+      const person = { name: '홍길동' };
+      //person = { age: 20 }; person 객체를 바꾸는 건 안됨
+      person.name = '이순신'; //person 객체의 내부 요소는 변경 가능하다.
+      person.age = 20;
+      console.log(person);
+    </script>
+  </body>
+</html>
